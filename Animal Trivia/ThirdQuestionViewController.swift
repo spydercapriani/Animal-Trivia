@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ThirdQuestionViewController.swift
 //  Animal Trivia
 //
 //  Created by Daniel Gilbert on 1/6/16.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ThirdQuestionViewController: UIViewController {
+    
     // Labels
     @IBOutlet weak var lblA: UILabel!
     @IBOutlet weak var lblB: UILabel!
@@ -19,11 +19,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnA: UIButton!
     @IBOutlet weak var btnB: UIButton!
     @IBOutlet weak var btnC: UIButton!
+    @IBOutlet weak var btnRestart: UIButton!
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // Do any additional setup after loading the view.
+        btnRestart.layer.cornerRadius = 7.0
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,7 +38,7 @@ class ViewController: UIViewController {
     @IBAction func aButtonPressed(sender: UIButton) {
         answerChosen(btnA, correct: false)
     }
-
+    
     @IBAction func bButtonPressed(sender: UIButton) {
         answerChosen(btnB, correct: false)
     }
@@ -44,7 +47,7 @@ class ViewController: UIViewController {
         answerChosen(btnC, correct: true)
     }
     
-    @IBAction func nextButtonPressed(sender: UIButton) {
+    @IBAction func restartButtonPressed(sender: UIButton) {
         resetChoices()
     }
     
@@ -108,4 +111,3 @@ class ViewController: UIViewController {
         btnC.enabled = enable
     }
 }
-

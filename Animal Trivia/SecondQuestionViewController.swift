@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SecondQuestionViewController.swift
 //  Animal Trivia
 //
 //  Created by Daniel Gilbert on 1/6/16.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class SecondQuestionViewController: UIViewController {
+    
     // Labels
     @IBOutlet weak var lblA: UILabel!
     @IBOutlet weak var lblB: UILabel!
@@ -20,10 +20,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnB: UIButton!
     @IBOutlet weak var btnC: UIButton!
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,13 +36,13 @@ class ViewController: UIViewController {
     @IBAction func aButtonPressed(sender: UIButton) {
         answerChosen(btnA, correct: false)
     }
-
+    
     @IBAction func bButtonPressed(sender: UIButton) {
-        answerChosen(btnB, correct: false)
+        answerChosen(btnB, correct: true)
     }
     
     @IBAction func cButtonPressed(sender: UIButton) {
-        answerChosen(btnC, correct: true)
+        answerChosen(btnC, correct: false)
     }
     
     @IBAction func nextButtonPressed(sender: UIButton) {
@@ -108,4 +109,3 @@ class ViewController: UIViewController {
         btnC.enabled = enable
     }
 }
-
